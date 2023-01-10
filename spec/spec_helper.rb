@@ -13,3 +13,9 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 end
+
+RSpec::Matchers.define :be_boolean do
+  match do |value|
+    [true, false].include? value
+  end
+end
