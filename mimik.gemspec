@@ -1,6 +1,10 @@
+# frozen_string_literal: true
+
+require_relative "lib/mimik/version"
+
 Gem::Specification.new do |spec|
   spec.name = "mimik"
-  spec.version = "0.0.1"
+  spec.version = Mimik::VERSION
   spec.authors = ["Hiram Habib"]
   spec.summary = "A gem to generate random data"
 
@@ -8,5 +12,5 @@ Gem::Specification.new do |spec|
     `git ls-files -z`.split("\x0").reject { |f| f.match(%r{\A(?:test|spec|features)/}) }
   end
   spec.license       = "MIT"
-  spec.required_ruby_version = Gem::Requirement.new(">= 2.4.0")
+  spec.required_ruby_version = Gem::Requirement.new(">= 2.7")
 end
