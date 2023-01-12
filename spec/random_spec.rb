@@ -19,6 +19,10 @@ RSpec.describe Random do
     it "should generate a random last name" do
       expect(Random.last_name).to be_a(String)
     end
+
+    it "should generate a random first name" do
+      expect(Random.first_name).to be_a(String)
+    end
   end
 
   context "addresses" do
@@ -50,6 +54,20 @@ RSpec.describe Random do
   context "dates" do
     it "should generate a random date between two dates" do
       expect(Random.date_between(Date.new(2018, 1, 1)..Date.new(2018, 12, 31))).to be_a(Date)
+    end
+  end
+
+  context "contact info" do
+    it "should generate a random phone number" do
+      expect(Random.phone_number).to be_a(String)
+    end
+
+    it "should generate a random mobile number" do
+      expect(Random.mobile_number).to be_a(String)
+    end
+
+    it "should generate a random email" do
+      expect(Random.email).to be_a(String)
     end
   end
 end
