@@ -46,4 +46,10 @@ RSpec.describe Random do
       expect(Random.county).to be_a(String)
     end
   end
+
+  context "dates" do
+    it "should generate a random date between two dates" do
+      expect(Random.date_between(Date.new(2018, 1, 1)..Date.new(2018, 12, 31))).to be_a(Date)
+    end
+  end
 end
