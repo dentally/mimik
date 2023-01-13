@@ -49,6 +49,10 @@ RSpec.describe Random do
     it "should generate a random county" do
       expect(Random.county).to be_a(String)
     end
+
+    it "should generate a random post code" do
+      expect(Random.post_code).to be_a(String)
+    end
   end
 
   context "dates" do

@@ -30,5 +30,9 @@ module Mimik
     def county
       @@localised_addresses["counties"].sample
     end
+
+    def post_code
+      @@localised_addresses["post_codes"].sample
+    end
   end
 end
