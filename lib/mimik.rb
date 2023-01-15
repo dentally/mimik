@@ -15,6 +15,14 @@ module Mimik
       def locale
         Thread.current[:config_locale]
       end
+
+      # Have seen this done in faker where you can make blocks of code run with a specific locale
+      def with_locale(temp_locale = nil)
+        current_locale = Mimik::Config.locale
+        Mimik::Config.locale = temp_locale
+      ensure
+        Mimik::Config.locale = current_locale
+      end
     end
   end
 end
