@@ -12,9 +12,8 @@ module Mimik
         Thread.current[:config_locale] = new_locale
       end
 
-      def locale(new_locale = nil)
-        Thread.current[:config_locale] = new_locale if new_locale
-        Thread.current[:config_locale] || :en
+      def locale
+        Thread.current[:config_locale]
       end
     end
   end
