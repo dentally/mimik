@@ -9,11 +9,11 @@ module Mimik
   module Config
     class << self
       def locale=(new_locale)
-        Thread.current[:config_locale] = new_locale
+        @@locale = new_locale
       end
 
       def locale
-        Thread.current[:config_locale]
+        @@locale
       end
 
       # Have seen this done in faker where you can make blocks of code run with a specific locale
